@@ -16,6 +16,9 @@
             <ul class="navbar-nav ml-auto">
                 {% if is_granted('ROLE_ADMIN') %}
                     <li class="nav-item">
+                        <a class="nav-link" href={{ path('seizoen_index') }}>Seizoen</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href={{ path('kamer_index') }}>Kamers</a>
                     </li>
                     <li class="nav-item">

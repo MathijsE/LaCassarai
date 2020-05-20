@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Prijs</th>
+                <th>Kamer_nr</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -18,6 +19,7 @@
             <tr>
                 <td>{{ kamer.id }}</td>
                 <td>{{ kamer.prijs }}</td>
+                <td>{{ kamer.kamerNr }}</td>
                 <td>
                     <a href="{{ path('kamer_show', {'id': kamer.id}) }}">show</a>
                     <a href="{{ path('kamer_edit', {'id': kamer.id}) }}">edit</a>
@@ -25,7 +27,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
         </tbody>

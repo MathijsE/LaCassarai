@@ -40,6 +40,11 @@ class Kamer
      */
     private $reserverings;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $kamer_nr;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -133,6 +138,18 @@ class Kamer
                 $reservering->setKamerid(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getKamerNr(): ?int
+    {
+        return $this->kamer_nr;
+    }
+
+    public function setKamerNr(int $kamer_nr): self
+    {
+        $this->kamer_nr = $kamer_nr;
 
         return $this;
     }

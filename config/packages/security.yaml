@@ -37,3 +37,4 @@ security:
         - { path: '^/kamer', roles: ROLE_ADMIN }
         - { path: '^/reservering', roles: ROLE_ADMIN }
         - { path: '^/user', roles: ROLE_ADMIN }
+        - { path: '^/seizoen', roles: ROLE_ADMIN }
